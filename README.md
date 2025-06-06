@@ -97,35 +97,32 @@ The insights have been distilled into well-structured dashboards to highlight th
 
 #### 1. Temporal Analysis Dashboard
 
--Total Ride Count & Duration: Members take significantly more rides, though casual riders have longer trip durations on average.
--Monthly Trends: Member usage remains steady across the year with peaks in spring and fall. Casual usage is highly seasonal, peaking in summer.
--Weekday vs Weekend Patterns: Members ride mostly on weekdays, suggesting commuting habits. Casual riders dominate on weekends, indicating recreational use.
--Day-wise Trends: Members peak midweek; casual riders peak during weekends.
+- Total Ride Count & Duration: Members take significantly more rides, though casual riders have longer trip durations on average.
+- Monthly Trends: Member usage remains steady across the year with peaks in spring and fall. Casual usage is highly seasonal, peaking in summer.
+- Weekday vs Weekend Patterns: Members ride mostly on weekdays, suggesting commuting habits. Casual riders dominate on weekends, indicating recreational use.
+- Day-wise Trends: Members peak midweek; casual riders peak during weekends.
+
+![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/a8734823-7157-4f25-90a2-07793f0b4f74)
 
 #### 2. Ride Type & Duration Analysis Dashboard
 
--Bike Type Preferences: Casual riders prefer electric scooters; members lean towards classic and electric bikes.
--Hourly Ride Trends: Members show commute-time peaks (8 AM and 5 PM), while casual usage builds gradually toward mid-afternoon.
--Trip Duration Distribution: Members mostly take short trips (0–10 mins), while casual riders are more likely to take longer trips.
+- Bike Type Preferences: Casual riders prefer electric scooters; members lean towards classic and electric bikes.
+- Hourly Ride Trends: Members show commute-time peaks (8 AM and 5 PM), while casual usage builds gradually toward mid-afternoon.
+- Trip Duration Distribution: Members mostly take short trips (0–10 mins), while casual riders are more likely to take longer trips.
+
+![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/22f3f3f4-c72b-426e-898a-56fe4b3e9c65)
 
 ### Visualisation Strategy
 
--Dashboards were created in Tableau to ensure professional-quality presentation.
--Charts are annotated, colour-coded, and aligned for ease of interpretation.
--Data is segmented clearly by rider type, time, and bike preference to highlight key behavioural contrasts.
+- Dashboards were created in Tableau to ensure professional-quality presentation.
+- Charts are annotated, colour-coded, and aligned for ease of interpretation.
+- Data is segmented clearly by rider type, time, and bike preference to highlight key behavioural contrasts.
 
 These visualisations help communicate how annual members and casual riders use Cyclistic bikes differently, supporting targeted marketing strategies to increase memberships.
-
-![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/a8734823-7157-4f25-90a2-07793f0b4f74)
-![Cyclistic Dashboard_1]( )
 
 ## Act 
 
 Based on the analysis of Cyclistic’s bike-share data, we identified clear behavioural differences between annual members and casual riders. These insights inform strategies to convert more casual riders into loyal members.
-
-### Final Conclusion
-
-Annual members use Cyclistic bikes for short, frequent, weekday commutes, while casual riders take longer, leisure-oriented trips, mostly on weekends and during warmer months. These distinct patterns suggest targeted marketing and product offerings can improve membership conversion.
 
 ### Top 3 Recommendations
 
@@ -143,3 +140,7 @@ Use historical ride data to segment and retarget casual riders who consistently 
 
 #### 5. Introduce a Time-Limited Trial Membership at Peak Times
 Offer casual riders a 7–14 day trial during weekends or seasonal peaks to access membership perks. This encourages high-engagement users to experience membership benefits first-hand, increasing the likelihood of conversion.
+
+### Final Conclusion
+
+Annual members use Cyclistic bikes for short, frequent, weekday commutes, while casual riders take longer, leisure-oriented trips, mostly on weekends and during warmer months. These distinct patterns suggest targeted marketing and product offerings can improve membership conversion.
