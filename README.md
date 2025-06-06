@@ -120,6 +120,8 @@ The insights have been distilled into well-structured dashboards to highlight th
 
 These visualisations help communicate how annual members and casual riders use Cyclistic bikes differently, supporting targeted marketing strategies to increase memberships.
 
+**Full Interactive Dashboards:** [View on Tableau Public](https://public.tableau.com/views/Cyclistic_Analysis_17492411920950/TemporalAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 ## Act 
 
 Based on the analysis of Cyclistic’s bike-share data, we identified clear behavioural differences between annual members and casual riders. These insights inform strategies to convert more casual riders into loyal members.
