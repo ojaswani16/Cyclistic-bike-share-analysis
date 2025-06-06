@@ -90,18 +90,34 @@ The cleaned dataset was consistent and ready for analysis.
 - Over 96% of trips end at a different station.
 - Members are ~20x more likely to end rides at the same station, possibly due to loop rides or fitness purposes.
 
-## Share Phase
+## Share 
 
-The final Tableau dashboard presents key findings through visual summaries. It highlights:
+The insights have been distilled into well-structured dashboards to highlight the behavioural differences between annual members and casual riders.
 
-- Monthly and daily ride trends by rider type
-- Hourly usage patterns to show peak commute vs leisure times
-- Duration-based comparisons across weekdays and weekends
-- Ride type classifications and ride length distributions
+### Dashboard Overview
+
+#### 1. Temporal Analysis Dashboard
+
+-Total Ride Count & Duration: Members take significantly more rides, though casual riders have longer trip durations on average.
+-Monthly Trends: Member usage remains steady across the year with peaks in spring and fall. Casual usage is highly seasonal, peaking in summer.
+-Weekday vs Weekend Patterns: Members ride mostly on weekdays, suggesting commuting habits. Casual riders dominate on weekends, indicating recreational use.
+-Day-wise Trends: Members peak midweek; casual riders peak during weekends.
+
+#### 2. Ride Type & Duration Analysis Dashboard
+
+-Bike Type Preferences: Casual riders prefer electric scooters; members lean towards classic and electric bikes.
+-Hourly Ride Trends: Members show commute-time peaks (8 AM and 5 PM), while casual usage builds gradually toward mid-afternoon.
+-Trip Duration Distribution: Members mostly take short trips (0–10 mins), while casual riders are more likely to take longer trips.
+
+### Visualisation Strategy
+
+-Dashboards were created in Tableau to ensure professional-quality presentation.
+-Charts are annotated, colour-coded, and aligned for ease of interpretation.
+-Data is segmented clearly by rider type, time, and bike preference to highlight key behavioural contrasts.
 
 These visualisations help communicate how annual members and casual riders use Cyclistic bikes differently, supporting targeted marketing strategies to increase memberships.
 
-![Cyclistic Dashboard](cyclistic_dashboard.png)
+![Cyclistic Dashboard_1](cyclistic_dashboard.png)
 
 ## Act 
 
@@ -113,10 +129,17 @@ Annual members use Cyclistic bikes for short, frequent, weekday commutes, while 
 
 ### Top 3 Recommendations
 
-#### 1. Introduce a “Weekend-Only Membership” Plan
-Offer a low-cost membership tier that activates only on weekends, when casual riders are most active. This limited plan caters directly to their behaviour, easing them into the membership ecosystem without demanding a full annual commitment.
+#### 1. Weekend-Only Membership
+Introduce a low-cost plan exclusively valid on weekends to align with casual riders' peak usage, providing a flexible entry point into membership.
 
-#### 2. Promote “Long Ride Savings” With Membership
+#### 2. Long Ride Savings Campaign
+Utilise behavioural data to highlight potential savings for long rides through targeted app notifications and personalised email reports.
 
-#### 3. Ride-Now, Decide-Later Trial
-Seasonal Pass with Upgrade Option
+#### 3. Seasonal Membership 
+Deploy a time-bound summer pass that includes prompts to upgrade to full annual membership towards the end of the season.
+
+#### 4. Optimise Digital Marketing to Target High-Duration Casual Riders
+Use historical ride data to segment and retarget casual riders who consistently take longer trips with tailored membership messaging.
+
+#### 5. Introduce a Time-Limited Trial Membership at Peak Times
+Offer casual riders a 7–14 day trial during weekends or seasonal peaks to access membership perks. This encourages high-engagement users to experience membership benefits first-hand, increasing the likelihood of conversion.
