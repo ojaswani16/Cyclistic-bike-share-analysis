@@ -91,14 +91,14 @@ The cleaned dataset was consistent and ready for analysis.
 
 ## Share 
 
-The insights have been distilled into well-structured dashboards to highlight the behavioural differences between annual members and casual riders.
+The insights are presented through interactive Tableau dashboards to highlight the behavioural differences between annual members and casual riders.
 
 ### Dashboard Overview
 
 #### 1. Temporal Analysis Dashboard
 
 - Total Ride Count & Duration: Members take significantly more rides, though casual riders have longer trip durations on average.
-- Monthly Trends: Member usage remains steady across the year with peaks in spring and fall. Casual usage is highly seasonal, peaking in summer.
+- Monthly Trends: Member usage remains steady across the year with peaks in spring and fall. Casual rider activity is highly seasonal, peaking in summer.
 - Weekday vs Weekend Patterns: Members ride mostly on weekdays, suggesting commuting habits. Casual riders dominate on weekends, indicating recreational use.
 - Day-wise Trends: Members peak midweek; casual riders peak during weekends.
 
@@ -110,15 +110,13 @@ The insights have been distilled into well-structured dashboards to highlight th
 - Hourly Ride Trends: Members show commute-time peaks (8 AM and 5 PM), while casual usage builds gradually toward mid-afternoon.
 - Trip Duration Distribution: Members mostly take short trips (0–10 mins), while casual riders are more likely to take longer trips.
 
-![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/22f3f3f4-c72b-426e-898a-56fe4b3e9c65)
+![Cyclistic Dashboard_2](https://github.com/user-attachments/assets/22f3f3f4-c72b-426e-898a-56fe4b3e9c65)
 
 ### Visualisation Strategy
 
-- Dashboards were created in Tableau to ensure professional-quality presentation.
+- Dashboards are created in Tableau to ensure professional-quality presentation.
 - Charts are annotated, colour-coded, and aligned for ease of interpretation.
 - Data is segmented clearly by rider type, time, and bike preference to highlight key behavioural contrasts.
-
-These visualisations help communicate how annual members and casual riders use Cyclistic bikes differently, supporting targeted marketing strategies to increase memberships.
 
 **Full Interactive Dashboards:** [View on Tableau Public](https://public.tableau.com/views/Cyclistic_Analysis_17492411920950/TemporalAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
@@ -128,21 +126,15 @@ Based on the analysis of Cyclistic’s bike-share data, we identified clear beha
 
 ### Top 3 Recommendations
 
-#### 1. Weekend-Only Membership
-Introduce a low-cost plan exclusively valid on weekends to align with casual riders' peak usage, providing a flexible entry point into membership.
+#### 1. Flexible Trial-Based Membership Plans
+Introduce low-commitment options such as a weekend-only membership and short-term trial passes (7–14 days) during seasonal peaks. These align with casual riders’ usage patterns and allow them to experience membership benefits with minimal risk, increasing the likelihood of conversion.
 
-#### 2. Long Ride Savings Campaign
-Utilise behavioural data to highlight potential savings for long rides through targeted app notifications and personalised email reports.
+#### 2. Behaviour-Driven Marketing & Cost-Saving Campaigns
+Leverage ride history to segment casual users—especially those with high ride frequency or longer durations—and target them through personalised digital campaigns. Highlight potential savings through membership using in-app prompts, email insights, and social media ads to nudge them toward conversion.
 
-#### 3. Seasonal Membership 
-Deploy a time-bound summer pass that includes prompts to upgrade to full annual membership towards the end of the season.
+#### 3. Seasonal Passes 
+Launch summer-specific passes tailored to casual riders’ seasonal preferences, accompanied by timely upgrade prompts encouraging users to convert to full annual membership. This approach taps into their peak engagement window while gently guiding them toward a longer-term commitment.
 
-#### 4. Optimise Digital Marketing to Target High-Duration Casual Riders
-Use historical ride data to segment and retarget casual riders who consistently take longer trips with tailored membership messaging.
+## Conclusion
 
-#### 5. Introduce a Time-Limited Trial Membership at Peak Times
-Offer casual riders a 7–14 day trial during weekends or seasonal peaks to access membership perks. This encourages high-engagement users to experience membership benefits first-hand, increasing the likelihood of conversion.
-
-### Final Conclusion
-
-Annual members use Cyclistic bikes for short, frequent, weekday commutes, while casual riders take longer, leisure-oriented trips, mostly on weekends and during warmer months. These distinct patterns suggest targeted marketing and product offerings can improve membership conversion.
+Annual members use Cyclistic bikes for short, frequent, weekday commutes, while casual riders take longer, leisure-oriented trips, mostly on weekends and during warmer months. These distinct patterns support data-driven membership strategies aimed at increasing annual subscriptions through tailored offerings and targeted outreach.
