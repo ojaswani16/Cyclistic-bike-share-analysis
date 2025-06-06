@@ -10,7 +10,6 @@ This project is part of the **Google Data Analytics Capstone**. The goal is to a
 
 To identify behavioural differences between casual riders and annual members to uncover actionable, data-driven insights that support strategic marketing decisions, aimed at converting casual riders into annual members.
 
-
 ---
 
 ## Data Source
@@ -117,7 +116,8 @@ The insights have been distilled into well-structured dashboards to highlight th
 
 These visualisations help communicate how annual members and casual riders use Cyclistic bikes differently, supporting targeted marketing strategies to increase memberships.
 
-![Cyclistic Dashboard_1](cyclistic_dashboard.png)
+![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/a8734823-7157-4f25-90a2-07793f0b4f74)
+![Cyclistic Dashboard_1]( )
 
 ## Act 
 
