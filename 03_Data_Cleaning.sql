@@ -1,3 +1,8 @@
+-- Inspect Data Structure
+SELECT * 
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.rides_2024`
+LIMIT 10;
+
 -- Check for duplicate ride_id
 SELECT ride_id, COUNT(ride_id)
 FROM `cyclistic-analysis-461216.cyclistic_2024_data.rides_2024`
@@ -20,11 +25,16 @@ SELECT
   *,
   TRIM(start_station_name) AS start_station_name,
   TRIM(end_station_name) AS end_station_name
-FROM `cyclistic-analysis-461216.cyclistic_2024_data.cleaned_rides_2024`;
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.rides_2024`;
 
 -- Removing NULL station names 
 CREATE OR REPLACE TABLE `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic` AS
 SELECT *
-FROM `...cleaned_rides_2024`
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.cleaned_rides_2024`
 WHERE start_station_name IS NOT NULL
-  AND start_station_id IS NOT NULL
+  AND start_station_id IS NOT NULL;
+
+-- Removing Invalid Durations
+DELETE FROM `cyclistic-analysis-461216.cyclistic_2024_data.cleaned_rides_2024`
+WHERE trip_duration <= 0;
+
