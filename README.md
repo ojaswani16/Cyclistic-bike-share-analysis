@@ -1,31 +1,47 @@
-# Cyclistic-bike-share-analysis
+# Cyclistic Bike-Share Analysis: Member vs. Casual Rider Behaviour
 A data analysis case study exploring ride usage patterns of Cyclistic's casual and annual members to provide actionable business recommendations.
+
+## Table of Contents
+- [Overview](#overview)
+- [Business Task](#business-task)
+- [Data Source](#data-source)
+- [Tools Used](#tools-used)
+- [Process](#process)
+- [Analysis](#analysis)
+- [Share](#share)
+- [Act](#act)
+- [Conclusion](#conclusion)
+
 ## Overview
 
 This project is part of the **Google Data Analytics Capstone**. The goal is to analyse how Cyclistic’s casual riders and annual members use the bike-share service differently, and provide actionable insights to help convert casual riders into members.
 
 ---
 
-## Business Task
+## Ask
+
+### Business Task
 
 To identify behavioural differences between casual riders and annual members to uncover actionable, data-driven insights that support strategic marketing decisions, aimed at converting casual riders into annual members.
 
 ---
 
-## Data Source
+## Prepare
+
+### Data Source
 
 - **Dataset**: Divvy/Cyclistic Public Bike-Share Dataset  
 - **URL**: [divvy-tripdata.s3.amazonaws.com](https://divvy-tripdata.s3.amazonaws.com/index.html)  
 - **Format**: `.csv`  
 - **Date Range**: April 2024 – April 2025  
 - **Provider**: Lyft/Divvy (City of Chicago)  
-- **Stored Using**: Google BigQuery
+- **Queries and Processed Using**: Google BigQuery
 
 The data is public, anonymised, and verified for completeness and consistency, making it reliable and suitable for educational analysis.
 
 ---
 
-## Tools Used
+### Tools Used
 
 - **SQL** (Google BigQuery) – Data cleaning, transformation, and analysis.
 - **Excel** – Initial data exploration and structure validation  
@@ -41,7 +57,7 @@ The data is public, anonymised, and verified for completeness and consistency, m
 
 ### Data Integrity and Cleaning
 - Removed null values, duplicate ride IDs, and rows with negative ride durations.
-- Standardised datetime formats and ensured consistent schema across all 13 monthly CSVs.
+- Standardised datetime formats and ensured consistent schema across all 13 months of data.
 - Created new fields such as `ride_length`, `ride_length_minutes`, `day_of_week`, `month`, and `day_type` for better analysis.
 - Resolved data type mismatches using SQL functions like `CAST()` and `FORMAT_TIMESTAMP()`.
 - Merged monthly datasets into a single clean table using `UNION ALL`.
