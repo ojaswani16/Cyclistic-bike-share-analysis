@@ -42,21 +42,19 @@ The data is public, anonymised, and verified for completeness and consistency, m
 ### Data Validation & Credibility Assessment
 
 - Downloaded 13 monthly CSV files.
-- Verified all datasets had consistent schema across months (column names, types, and order).
+- Verified schema consistency across months (column names, types, and order).
 - Performed structure and type checks in Excel:
     - Counted blanks to identify missing data.
-    - Ensured start_time, end_time, and IDs were in the correct formats.
-- No major anomalies or corrupt files detected.
-
-Determined that the dataset is clean, ethical, and appropriate for academic analysis.
+    - Validate formats of timestamps and IDs.
+- No corrupt files or ethical concerns found. Data suitable for educational analysis.
 
 ---
 
 ### Tools Used
 
-- **SQL** (Google BigQuery) – Data cleaning, transformation, and analysis.
-- **Excel** – Initial data exploration and structure validation  
-- **Tableau** – Data visualisation
+- **Excel** – Initial structure checks & derived column creation.
+- **Google BigQuery (SQL)** – Cleaning, merging, transformation, and querying.
+- **Tableau** – Data visualisation & dashboarding.
 
 ---
 
@@ -69,17 +67,17 @@ Determined that the dataset is clean, ethical, and appropriate for academic anal
 ### Data Preparation and Cleaning Workflow
 
 #### 1. Initial Inspection (Excel)
-- Downloaded 13 monthly CSVs from April 2024 to April 2025.
-- Checked schema consistency (column names, data types, and order).
-- Counted blank values and changed formats to ensure consistency across files.
-- Created initial derived columns using functions:
-month, day_of_week, day_type, ride_length, and ride_length_mins.
+- Created new derived columns:
+  month, day_of_week, day_type, ride_length, and ride_length_mins.
+- Reformatted inconsistent date/time and categorical values.
+- Counted blanks to assess cleaning load for SQL phase.
 
 #### 2. Data Integration & Cleanup (BigQuery)
 - Uploaded all monthly files to BigQuery individually.
-- Used UNION ALL to combine datasets into a master table.
-- Applied CAST() and other SQL functions to fix data types and formatting inconsistencies.
-- Removed duplicates and incomplete/null start station data; end station nulls were kept due to limited impact on analysis.
+- Combined the 13 monthly tables using `UNION ALL`.
+- Standardised column types with `CAST()`.
+- Removed duplicate `ride_id` rows.
+- Filtered out records with null start station data; end station nulls were kept due to limited impact on analysis.
 - Filtered out rides shorter than 1 minute or longer than 1440 minutes (24 hours) to avoid outliers and skewed averages.
 - Created additional columns directly in SQL:
 hour (ride start hour) and month_num (numeric form of month). 
