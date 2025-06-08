@@ -6,7 +6,7 @@ A data analysis case study exploring ride usage patterns of Cyclistic's casual a
 - [Ask](#ask)
 - [Prepare](#prepare)
 - [Process](#process)
-- [Analysis](#analysis)
+- [Analyze](#analyze)
 - [Share](#share)
 - [Act](#act)
 - [Conclusion](#conclusion)
@@ -44,16 +44,16 @@ The data is public, anonymised, and verified for completeness and consistency, m
 - Verified schema consistency across months (column names, types, and order).
 - Performed structure and type checks in Excel:
     - Counted blanks to identify missing data.
-    - Validate formats of timestamps and IDs.
+    - Validated formats of timestamps and IDs.
 - No corrupt files or ethical concerns found. Data suitable for educational analysis.
 
 ---
 
 ### Tools Used
 
-- **Excel** – Initial structure checks & derived column creation.
-- **Google BigQuery (SQL)** – Cleaning, merging, transformation, and querying.
-- **Tableau** – Data visualisation & dashboarding.
+- **Excel**: Initial structure checks & derived column creation.
+- **Google BigQuery (SQL)**: Cleaning, merging, transformation, and querying.
+- **Tableau**: Data visualisation & dashboarding.
 
 ---
 
@@ -79,7 +79,8 @@ The data is public, anonymised, and verified for completeness and consistency, m
 - Filtered out records with null start station data; end station nulls were kept due to limited impact on analysis.
 - Filtered out rides shorter than 1 minute or longer than 1440 minutes (24 hours) to avoid outliers and skewed averages.
 - Created additional columns directly in SQL:
-hour (ride start hour) and month_num (numeric form of month). 
+  - ride_hour (start hour)
+  - month_num (month number)
 
 ### SQL Scripts
 
@@ -97,7 +98,7 @@ The final dataset was clean, consistent, and ready for advanced analysis.
 
 ---
 
-## Analysis
+## Analyze
 
 ### How do Annual Members & Casual Riders Use Cyclistic Bikes Differently?
 
@@ -158,7 +159,7 @@ The insights are presented through interactive Tableau dashboards to highlight t
 
 ### Visualisation Strategy
 
-- Dashboards are created in Tableau to ensure professional-quality presentation.
+- Interactive dashboards were created using Tableau for a clean, professional visual presentation.
 - Charts are annotated, colour-coded, and aligned for ease of interpretation.
 - Data is segmented clearly by rider type, time, and bike preference to highlight key behavioural contrasts.
 
@@ -182,3 +183,5 @@ Launch summer-specific passes tailored to casual riders’ seasonal preferences,
 ## Conclusion
 
 Annual members use Cyclistic bikes for short, frequent, weekday commutes, while casual riders take longer, leisure-oriented trips, mostly on weekends and during warmer months. These distinct patterns support data-driven membership strategies aimed at increasing annual subscriptions through tailored offerings and targeted outreach.
+
+**For Future:** Further research could explore pricing sensitivity, ride bundling strategies, or analyse cancellation reasons using customer support data if available.
