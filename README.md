@@ -15,6 +15,14 @@ A data analysis case study exploring ride usage patterns of Cyclistic's casual a
 
 This project is part of the **Google Data Analytics Capstone**. The goal is to analyse how Cyclistic’s casual riders and annual members use the bike-share service differently, and provide actionable insights to help convert casual riders into members.
 
+## TL;DR
+
+- This case study explores ride behaviour differences between Cyclistic’s casual riders and annual members using 13 months of trip data.
+- Tools used: Excel (cleaning), BigQuery (SQL querying), Tableau (visualisation)
+- Key findings: Casual riders take longer, weekend rides; members ride shorter durations on weekdays
+- Dashboards reveal trends in usage across time, duration, and geography
+- Recommendations include: short-term trials, targeted marketing, and seasonal pass offerings
+
 ---
 
 ## Ask
