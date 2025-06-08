@@ -3,9 +3,8 @@ A data analysis case study exploring ride usage patterns of Cyclistic's casual a
 
 ## Table of Contents
 - [Overview](#overview)
-- [Business Task](#business-task)
-- [Data Source](#data-source)
-- [Tools Used](#tools-used)
+- [Ask](#ask)
+- [Prepare](#prepare)
 - [Process](#process)
 - [Analysis](#analysis)
 - [Share](#share)
