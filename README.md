@@ -82,7 +82,15 @@ The data is public, anonymised, and verified for completeness and consistency, m
 - Created additional columns directly in SQL:
 hour (ride start hour) and month_num (numeric form of month). 
 
+### SQL Scripts
+
+- [01. Data Combining.sql](01_Data_Combining.sql)
+- [02. Data Exploration.sql](02_Data_Exploration.sql)
+- [03. Data Cleaning.sql](03_Data_Cleaning.sql)
+- [04. Data Analysis.sql](04_Data_Analysis.sql)
+
 ### Documentation
+
 - Each step was documented and validated to maintain transparency and reproducibility.
 - The relevance to the business question drove cleaning decisions.
 
