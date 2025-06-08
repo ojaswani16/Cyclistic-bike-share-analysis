@@ -39,6 +39,17 @@ To identify behavioural differences between casual riders and annual members to 
 
 The data is public, anonymised, and verified for completeness and consistency, making it reliable and suitable for educational analysis.
 
+### Data Validation & Credibility Assessment
+
+- Downloaded 13 monthly CSV files.
+- Verified all datasets had consistent schema across months (column names, types, and order).
+- Performed structure and type checks in Excel:
+    - Counted blanks to identify missing data.
+    - Ensured start_time, end_time, and IDs were in the correct formats.
+- No major anomalies or corrupt files detected.
+
+Determined that the dataset is clean, ethical, and appropriate for academic analysis.
+
 ---
 
 ### Tools Used
@@ -55,17 +66,29 @@ The data is public, anonymised, and verified for completeness and consistency, m
 - **Excel** was used initially to inspect the data and perform basic formatting and calculations.
 - **Google BigQuery (SQL)** was selected for its ability to handle large datasets and perform efficient cleaning and transformation tasks.
 
-### Data Integrity and Cleaning
-- Removed null values, duplicate ride IDs, and rows with negative ride durations.
-- Standardised datetime formats and ensured consistent schema across all 13 months of data.
-- Created new fields such as `ride_length`, `ride_length_minutes`, `day_of_week`, `month`, and `day_type` for better analysis.
-- Resolved data type mismatches using SQL functions like `CAST()` and `FORMAT_TIMESTAMP()`.
-- Merged monthly datasets into a single clean table using `UNION ALL`.
+### Data Preparation and Cleaning Workflow
+
+#### 1. Initial Inspection (Excel)
+- Downloaded 13 monthly CSVs from April 2024 to April 2025.
+- Checked schema consistency (column names, data types, and order).
+- Counted blank values and changed formats to ensure consistency across files.
+- Created initial derived columns using functions:
+month, day_of_week, day_type, ride_length, and ride_length_mins.
+
+#### 2. Data Integration & Cleanup (BigQuery)
+- Uploaded all monthly files to BigQuery individually.
+- Used UNION ALL to combine datasets into a master table.
+- Applied CAST() and other SQL functions to fix data types and formatting inconsistencies.
+- Removed duplicates and incomplete/null start station data; end station nulls were kept due to limited impact on analysis.
+- Filtered out rides shorter than 1 minute or longer than 1440 minutes (24 hours) to avoid outliers and skewed averages.
+- Created additional columns directly in SQL:
+hour (ride start hour) and month_num (numeric form of month). 
 
 ### Documentation
-- Each step of the cleaning process was logged for transparency and reproducibility.
+- Each step was documented and validated to maintain transparency and reproducibility.
+- The relevance to the business question drove cleaning decisions.
 
-The cleaned dataset was consistent and ready for analysis.
+The final dataset was clean, consistent, and ready for advanced analysis.
 
 ---
 
@@ -143,7 +166,7 @@ Based on the analysis of Cyclistic’s bike-share data, we identified clear beha
 ### Top 3 Recommendations
 
 #### 1. Flexible Trial-Based Membership Plans
-Introduce low-commitment options such as a weekend-only membership and short-term trial passes (7–14 days) during seasonal peaks. These align with casual riders’ usage patterns and allow them to experience membership benefits with minimal risk, increasing the likelihood of conversion.
+Introduce low-commitment options such as a weekend-only membership and short-term trial passes (7–14 days) during seasonal peaks. These align with the usage patterns of casual riders and allow them to experience membership benefits with minimal risk, thereby increasing the likelihood of conversion.
 
 #### 2. Behaviour-Driven Marketing & Cost-Saving Campaigns
 Leverage ride history to segment casual users—especially those with high ride frequency or longer durations—and target them through personalised digital campaigns. Highlight potential savings through membership using in-app prompts, email insights, and social media ads to nudge them toward conversion.
