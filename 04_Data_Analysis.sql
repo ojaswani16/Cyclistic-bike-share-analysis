@@ -1,49 +1,49 @@
---Total Rides by User Type
+-- USER TYPE OVERVIEW
 SELECT member_casual, COUNT(*) AS total_rides
-FROM cyclistic_analysis
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual;
 
---Monthly Trends
+-- MONTHLY TRENDS
 SELECT
   member_casual,
   month,
   EXTRACT(MONTH FROM PARSE_DATE('%B', month)) AS month_num,
   COUNT(ride_id) AS ride_count,
   ROUND(AVG(ride_length_mins), 2) AS avg_ride_duration
-FROM `...analysis_with_hour`
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_with_hour`
 GROUP BY member_casual, month, month_num
 ORDER BY month_num;
 
---Rides by Day of Week
+-- RIDES BY DAY OF WEEK
 SELECT member_casual, day_of_week, COUNT(*) AS ride_count
-FROM cyclistic_analysis
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual, day_of_week;
 
---Rides by Day Type (Weekend/Weekday)
+-- RIDES BY DAY TYPE
 SELECT member_casual, day_type, COUNT(*) AS ride_count
-FROM cyclistic_analysis
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual, day_type;
 
---Rides by Hour
+-- RIDES BY HOUR
 SELECT member_casual, hour, COUNT(*) AS ride_count
-FROM cyclistic_analysis
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_with_hour`
 GROUP BY member_casual, hour;
 
---Rides by Bike Type
+-- BIKE TYPE DISTRIBUTION
 SELECT
   rideable_type,
   member_casual,
   COUNT(ride_id) AS ride_count
-FROM `...analysis_cyclistic`
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY rideable_type, member_casual
 ORDER BY ride_count DESC;
 
---Average Duration (in Minutes)
-SELECT member_casual, AVG(ride_length_mins) AS avg_duration
-FROM cyclistic_analysis
+-- AVERAGE RIDE DURATION
+SELECT member_casual, ROUND(AVG(ride_length_mins), 2) AS avg_duration
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual;
 
---Duration Bins 
+-- RIDE DURATION BINS
 SELECT
   member_casual,
   CASE
@@ -59,11 +59,11 @@ SELECT
     ELSE '12–24 hours'
   END AS duration_bin,
   COUNT(ride_id) AS ride_count
-FROM `...analysis_cyclistic`
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual, duration_bin
 ORDER BY duration_bin;
 
--- Duration Bins along with Day Type
+-- DURATION BIN BY DAY TYPE
 SELECT
   duration_bin,
   day_type,
@@ -83,12 +83,12 @@ FROM (
       WHEN ride_length_mins BETWEEN 481 AND 720 THEN '8–12 hours'
       ELSE '12–24 hours'
     END AS duration_bin
-  FROM `...analysis_cyclistic`
+  FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 )
 GROUP BY duration_bin, day_type, member_casual
 ORDER BY duration_bin, day_type;
 
---Top 10 Start Stations
+-- TOP 10 START STATIONS PER USER TYPE
 SELECT *
 FROM (
   SELECT
@@ -96,12 +96,12 @@ FROM (
     member_casual,
     COUNT(ride_id) AS ride_count,
     ROW_NUMBER() OVER (PARTITION BY member_casual ORDER BY COUNT(ride_id) DESC) AS rank
-  FROM `...analysis_cyclistic`
+  FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
   GROUP BY start_station_name, member_casual
 )
 WHERE rank <= 10;
 
--- Trip Start and End Patterns
+-- START AND END STATION MATCH
 SELECT
   member_casual,
   CASE
@@ -109,5 +109,5 @@ SELECT
     ELSE 'Different Station'
   END AS trip_type,
   COUNT(ride_id) AS ride_count
-FROM `...analysis_cyclistic`
+FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual, trip_type;
