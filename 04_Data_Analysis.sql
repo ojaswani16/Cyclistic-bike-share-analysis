@@ -3,15 +3,17 @@ SELECT member_casual, COUNT(*) AS total_rides
 FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual;
 
--- MONTHLY TRENDS
+-- MONTHLY TRENDS WITH MEDIAN INCLUDED
 SELECT
   member_casual,
   month,
   EXTRACT(MONTH FROM PARSE_DATE('%B', month)) AS month_num,
   COUNT(ride_id) AS ride_count,
-  ROUND(AVG(ride_length_mins), 2) AS avg_ride_duration
+  ROUND(AVG(ride_length_mins), 2) AS avg_ride_duration,
+  -- Calculating median ride duration using PERCENTILE_CONT for better central tendency
+  ROUND(PERCENTILE_CONT(ride_length_mins, 0.5) OVER (PARTITION BY member_casual, month), 2) AS median_ride_duration
 FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_with_hour`
-GROUP BY member_casual, month, month_num
+GROUP BY member_casual, month, month_num, ride_length_mins
 ORDER BY month_num;
 
 -- RIDES BY DAY OF WEEK
@@ -38,8 +40,13 @@ FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY rideable_type, member_casual
 ORDER BY ride_count DESC;
 
--- AVERAGE RIDE DURATION
-SELECT member_casual, ROUND(AVG(ride_length_mins), 2) AS avg_duration
+-- AVERAGE AND MEDIAN RIDE DURATION (Updated KPI version)
+SELECT
+  member_casual,
+  COUNT(*) AS total_rides,
+  ROUND(AVG(ride_length_mins), 2) AS avg_ride_duration,
+  -- Median used instead of just AVG to address skewed duration values
+  ROUND(MAX(PERCENTILE_CONT(ride_length_mins, 0.5) OVER (PARTITION BY member_casual)), 2) AS median_ride_duration
 FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual;
 
@@ -111,3 +118,4 @@ SELECT
   COUNT(ride_id) AS ride_count
 FROM `cyclistic-analysis-461216.cyclistic_2024_data.analysis_cyclistic`
 GROUP BY member_casual, trip_type;
+
