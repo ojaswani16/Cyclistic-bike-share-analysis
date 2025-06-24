@@ -11,7 +11,7 @@ A data analysis case study exploring ride usage patterns of Cyclistic's casual a
 - [Act](#act)
 - [Conclusion](#conclusion)
 
-## Overview
+## Overview 
 
 This project is part of the **Google Data Analytics Capstone**. The goal is to analyse how Cyclistic’s casual riders and annual members use the bike-share service differently, and provide actionable insights to help convert casual riders into members.
 
