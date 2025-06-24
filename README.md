@@ -87,7 +87,8 @@ Note: Ride duration data was skewed, so the median was calculated alongside the 
 - Standardised column types with `CAST()`.
 - Removed duplicate `ride_id` rows.
 - Filtered out records with null start station data; end station nulls were kept due to limited impact on analysis.
-- Filtered out rides shorter than 1 minute or longer than 1440 minutes (24 hours) to avoid outliers and skewed averages.
+- Filtered out rides shorter than 1 minute or longer than 1440 minutes (24 hours) to avoid extreme outliers.
+- Median was used alongside mean to account for the remaining skewness in trip duration.
 - Created additional columns directly in SQL:
   - ride_hour (start hour)
   - month_num (month number)
