@@ -63,6 +63,8 @@ The data is public, anonymised, and verified for completeness and consistency, m
 - **Google BigQuery (SQL)**: Cleaning, merging, transformation, and querying.
 - **Tableau**: Data visualisation & dashboarding.
 
+Note: Ride duration data was skewed, so the median was calculated alongside the mean to better reflect central tendency.
+
 ---
 
 ## Process
@@ -112,23 +114,25 @@ The final dataset was clean, consistent, and ready for advanced analysis.
 
 #### 1. Ride Frequency & Duration
 - Members took 3.15M rides compared to 1.79M by casual riders — 76% more.
-- Casual riders take longer trips on average (22.8 mins) than members (12.3 mins).
+- Casual riders take longer trips than members, with a median duration of 13 minutes compared to 9 for members. Average durations (22.8 vs 12.3 mins) are also included for context, though the data is right-skewed.
 
 #### 2. Day of Week Patterns
 - Members follow a strong weekday usage pattern, peaking midweek and declining on weekends, indicating routine commuting behaviour. 
 - Casual riders exhibit the opposite, spiking on weekends, enforcing recreational or leisure-based use.
 
 #### 3. Hourly Ride Trends
-- Members show sharp, structured usage peaks in early morning (8 AM) and afternoon (5 PM), typical commute hours.
+- Members exhibit sharp, structured usage peaks in the early morning (8 AM) and afternoon (5 PM), typical commute hours.
 - Casual riders exhibit a more gradual increase, peaking (12–5 PM), aligning with midday leisure use.
 
 #### 4. Seasonality
-- Members peak in April (~440K rides), then again in September, showing consistent year-round usage, especially in spring.
-- Casual riders peak in July and drop sharply post-October, indicating more weather-sensitive or seasonal usage.
+- Members maintain high usage from spring through autumn, peaking in September (~370k).
+- Casual riders display strong seasonality, peaking in July and dropping significantly after October, reflecting warmer-weather preference.
 
 #### 5. Ride Length Distribution
-- Members typically ride 0–10 mins, suggesting shorter, functional commutes.
-- Casual riders are more likely to take longer, recreational rides ranging from 15 minutes to over an hour.
+- Members typically ride for around 9 minutes (median), suggesting shorter, functional commutes.
+- Casual riders often take longer, recreational rides with a median duration of 13 minutes, though some trips extend over an hour, skewing the average.
+
+(Median was used as a more robust measure due to the skewed distribution of ride durations.)
 
 #### 6. Weekend Trends
 - Casual riders tend to ride significantly longer on weekends, reinforcing recreational or leisure-based usage. 
@@ -150,18 +154,18 @@ The insights are presented through interactive Tableau dashboards to highlight t
 
 #### 1. Temporal Analysis Dashboard
 
-- Total Ride Count & Duration: Members take significantly more rides, though casual riders have longer trip durations on average.
-- Monthly Trends: Member usage remains steady across the year with peaks in spring and fall. Casual rider activity is highly seasonal, peaking in summer.
-- Weekday vs Weekend Patterns: Members ride mostly on weekdays, suggesting commuting habits. Casual riders dominate on weekends, indicating recreational use.
+- Total Ride Count & Duration: Members take significantly more rides, though median ride durations show that casual riders consistently take longer trips than members.
+- Monthly Trends: Members ride consistently across seasons with mild peaks in spring and autumn. Casual usage is more seasonal, sharply peaking during summer months.
+- Weekday vs. Weekend Patterns: Members ride mostly on weekdays, suggesting commuting habits. Casual riders dominate on weekends, indicating recreational use.
 - Day-wise Trends: Members peak midweek; casual riders peak during weekends.
 
 ![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/a8734823-7157-4f25-90a2-07793f0b4f74)
 
 #### 2. Ride Type & Duration Analysis Dashboard
 
-- Bike Type Preferences: Casual riders take most of their trips on classic bikes, despite forming the majority of scooter users. Member usage is more balanced between classic and electric bikes. These patterns likely reflect pricing and bike availability.
+- Bike Type Preferences: Casual riders take the majority of their trips on classic bikes, although they make up most scooter usage as well. Median ride durations are highest for classic bikes.
 - Hourly Ride Trends: Members show commute-time peaks (8 AM and 5 PM), while casual usage builds gradually toward mid-afternoon.
-- Trip Duration Distribution: Members mostly take short trips (0–10 mins), while casual riders are more likely to take longer trips.
+- Trip Duration Distribution: Members mostly take trips around 9 minutes, while casual riders take longer rides, with a median closer to 13 minutes. Average durations are shown for context, though the data is right-skewed.
 
 ![Cyclistic Dashboard_2](https://github.com/user-attachments/assets/22f3f3f4-c72b-426e-898a-56fe4b3e9c65)
 
