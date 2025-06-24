@@ -159,7 +159,7 @@ The insights are presented through interactive Tableau dashboards to highlight t
 - Weekday vs. Weekend Patterns: Members ride mostly on weekdays, suggesting commuting habits. Casual riders dominate on weekends, indicating recreational use.
 - Day-wise Trends: Members peak midweek; casual riders peak during weekends.
 
-![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/f294115a-2af6-4beb-9218-524308d7dfc4)
+![Cyclistic Dashboard_1](https://github.com/user-attachments/assets/621970f4-f2f9-4c0a-ab88-809276e98e90)
 
 #### 2. Ride Type & Duration Analysis Dashboard
 
