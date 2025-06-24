@@ -159,7 +159,7 @@ The insights are presented through interactive Tableau dashboards to highlight t
 
 #### 2. Ride Type & Duration Analysis Dashboard
 
-- Bike Type Preferences: Casual riders prefer electric scooters; members lean towards classic and electric bikes.
+- Bike Type Preferences: Casual riders take most of their trips on classic bikes, despite forming the majority of scooter users. Member usage is more balanced between classic and electric bikes. These patterns likely reflect pricing and bike availability.
 - Hourly Ride Trends: Members show commute-time peaks (8 AM and 5 PM), while casual usage builds gradually toward mid-afternoon.
 - Trip Duration Distribution: Members mostly take short trips (0–10 mins), while casual riders are more likely to take longer trips.
 
