@@ -4,9 +4,7 @@
 
 CREATE TABLE `cyclistic-analysis-461216.cyclistic_2024_data.rides_2024` AS
 
--- April to November 2024
-SELECT * FROM `cyclistic-analysis-461216.cyclistic_2024_data.april_2024`
-UNION ALL
+-- May to November 2024
 SELECT * FROM `cyclistic-analysis-461216.cyclistic_2024_data.may_2024`
 UNION ALL
 SELECT * FROM `cyclistic-analysis-461216.cyclistic_2024_data.june_2024`
